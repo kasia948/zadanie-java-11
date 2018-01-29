@@ -11,7 +11,11 @@ public class ShowPosition {
         System.out.println("Podaj Y");
         b=input.nextInt();
 
-        if (a>0&&b>0){
+        if (a==0&&b==0) {
+            System.out.println("Punkt (" + a + ", " + b + ") leży na przecięciu osi współrzędnych");
+        }else if(a==0||b==0){
+            System.out.println("Punkt (" + a + " lub " + b + ") leży na osi współrzędnych");
+        } else if(a>0&&b>0){
             System.out.println("Punkt ("+a+", "+b+") leży w I ćwiartce układu współrzędnych.");
         } else if(a<0&&b>0){
             System.out.println("Punkt ("+a+", "+b+") leży w II ćwiartce układu współrzędnych.");
